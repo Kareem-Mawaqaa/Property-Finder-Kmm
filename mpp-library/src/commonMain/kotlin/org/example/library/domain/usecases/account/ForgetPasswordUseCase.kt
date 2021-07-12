@@ -11,7 +11,8 @@ class ForgetPasswordUseCase(val service: AccountApiService) {
 
     // TODO Handle it Here
 
-    fun execute(request: ForgetPasswordRequest): Flow<DataState<ForgetPasswordResponse>> =
+    fun execute(request: ForgetPasswordRequest):
+            Flow<DataState<ForgetPasswordResponse>> =
         flow {
 
             try {

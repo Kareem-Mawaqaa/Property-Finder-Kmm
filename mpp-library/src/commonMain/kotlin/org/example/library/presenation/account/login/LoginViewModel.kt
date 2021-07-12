@@ -23,8 +23,11 @@ class LoginViewModel() : BaseViewModel<LoginView>() {
 
     private val muCurrentLogin = MutableLiveData(false)
 
+
+
     private val loginUsecase: LoginUsecase = Instance()
-    private val reg: RegisterUsecase = Instance()
+    private val registerUsecase: RegisterUsecase = Instance()
+
 
 
     fun login(request: LoginRequest) {
@@ -32,7 +35,6 @@ class LoginViewModel() : BaseViewModel<LoginView>() {
         // TO Avoid Multiple Login when Deviec Rotate Screen
         if (muCurrentLogin.value) {
             view?.onLoading(true)
-            view?.onError(BaseError("Error ,Login in Process", ErrorType.DIALOG))
             return
         }
 
@@ -49,6 +51,7 @@ class LoginViewModel() : BaseViewModel<LoginView>() {
 
                 dataState.data?.let {
                     view?.onLoginSuccess(it)
+                    view?.goToHomeScreen()
 
                 }
 

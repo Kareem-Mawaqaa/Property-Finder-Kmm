@@ -6,10 +6,9 @@ import org.example.library.data.account.login.LoginRequest
 import org.example.library.data.account.login.LoginResponse
 
 
-
 interface AccountApiService {
 
     suspend fun login(request: LoginRequest): LoginResponse
 
-    suspend fun forgetPassword(request: ForgetPasswordRequest) : ForgetPasswordResponse
+    suspend fun forgetPassword(request: ForgetPasswordRequest): ForgetPasswordResponse
 }

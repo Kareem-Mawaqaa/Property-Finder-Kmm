@@ -5,6 +5,10 @@ import org.example.library.presenation.BaseView
 
 interface LoginView : BaseView {
 
+    // Callback
     fun onLoginSuccess(response: LoginResponse)
 
+
+    // Action
+    fun  goToHomeScreen()
 }

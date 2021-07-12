@@ -13,6 +13,12 @@ class LoginUsecase(val service: AccountApiService) {
     fun execute(
         loginRequest: LoginRequest,
     ): Flow<DataState<LoginResponse>> = flow {
+
+        if (loginRequest.oCustomer.Email?.isEmpty() == true) {
+            emit(DataState.error("dasdas"))
+            return@flow
+        }
+
         try {
             emit(DataState.loading())
 

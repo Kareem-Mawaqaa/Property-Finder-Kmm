@@ -4,6 +4,7 @@
 
 package org.example.app.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -31,9 +32,6 @@ class LoginActivity : AppCompatActivity(), LoginView {
     val loginViewModel: LoginViewModel by viewModels()
 
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -41,8 +39,8 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
         loginViewModel.attachView(this)
 
-        val edEmail  = findViewById<EditText>(R.id.email)
-        val edPassword  = findViewById<EditText>(R.id.password)
+        val edEmail = findViewById<EditText>(R.id.email)
+        val edPassword = findViewById<EditText>(R.id.password)
 
         findViewById<Button>(R.id.login).setOnClickListener {
 
@@ -68,12 +66,17 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
     }
 
+    override fun goToHomeScreen() {
+//        Intent(this, LoginActivity::class.java).apply { startActivity(this) }
+    }
+
     override fun onLoading(status: Boolean) {
         findViewById<ProgressBar>(R.id.progress).visibility =
             if (status) View.VISIBLE else View.GONE
     }
 
     override fun onError(error: BaseError) {
+        // TODO Show Alert Dialog
         Toast.makeText(this, "Error ${error.message}", Toast.LENGTH_LONG).show()
     }
 

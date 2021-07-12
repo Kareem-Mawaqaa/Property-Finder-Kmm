@@ -10,6 +10,14 @@ import UIKit
 import MultiPlatformLibrary
 
 class LoginViewController: UIViewController  , LoginView{
+  
+    
+    func goToHomeScreen() {
+        let homeVC = HomeVC()
+        navigationController?.present(homeVC, animated: true, completion: nil)
+
+    }
+    
  
     func onLoginSuccess(response: LoginResponse) {
         print("onLoginSuccess \(response.APIMessage)")
@@ -31,27 +39,22 @@ class LoginViewController: UIViewController  , LoginView{
         super.viewDidLoad()
         
         viewModel.attachView(view : self)
-        
-        viewModel.login(request: LoginRequest(APIKey: "123456", LanguageID: 1, oCustomer: OCustomer(DeviceID: "12345", DevicePlatform: 1, DeviceToken: "", Email: "kareem@mawaqaa.com", Password: "12345")))
+      
 
         // Do any additional setup after loading the view.
         
     }
 
     @IBAction func loginButton(_ sender: Any) {
-        let vc = HomeVC()
         
-        navigationController?.present(vc, animated: true, completion: nil)
+        
+        viewModel.login(request: LoginRequest(APIKey: "123456", LanguageID: 1, oCustomer: OCustomer(DeviceID: "12345", DevicePlatform: 1, DeviceToken: "", Email: "kareem@mawaqaa.com", Password: "12345")))
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        viewModel.deAttachView()
     }
-    */
-
+   
 }
