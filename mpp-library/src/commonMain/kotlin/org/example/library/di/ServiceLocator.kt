@@ -1,8 +1,6 @@
 package org.example.library.di
 
 import org.example.library.di.runner.Runner
-import org.example.library.domain.service.account.AccountApiService
-import org.example.library.domain.service.account.AccountApiServiceImpl
 import kotlin.reflect.KClass
 
 
@@ -11,16 +9,8 @@ class ServiceLocator internal constructor() {
     private val serviceMap: HashMap<Any, Any> = hashMapOf()
 
 
-    init {
-
-//        register(Json::class, lazy { json() })
-//        register(HttpClient::class, lazy { httpClient() })
-
-        register(AccountApiService::class, lazy { AccountApiServiceImpl() })
-
-        Runner(this)
-
-    }
+    // TODO Auto Load Dependencies
+    fun  runner() = Runner(this)
 
 
     inline fun <reified T : Any> instance(): T {
@@ -41,10 +31,6 @@ class ServiceLocator internal constructor() {
         return result
     }
 
-//
-//    private fun json(): Json = Json {
-//        ignoreUnknownKeys = true
-//    }
 
 
 }

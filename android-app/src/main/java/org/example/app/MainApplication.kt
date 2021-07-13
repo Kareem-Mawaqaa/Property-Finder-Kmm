@@ -22,7 +22,7 @@ class MainApplication : Application() {
         // Input is platform-specific:
         // * baseUrl - server url from platform build configs (allows use buildFlavors in configurations for server)
         // * settings - settings platform storage for https://github.com/russhwolf/multiplatform-settings
-        AppComponent.factory = SharedFactory(
+        SharedFactory(
             baseUrl = BuildConfig.BASE_URL,
             antilog = DebugAntilog(),
             settings = AndroidSettings(getSharedPreferences("app", Context.MODE_PRIVATE))

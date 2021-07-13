@@ -38,11 +38,27 @@ import kotlinx.serialization.json.Json
 import org.example.library.di.ServiceLocatorInstance
 
 class SharedFactory(
-    settings: Settings,
+    val settings: Settings,
     antilog: Antilog,
     baseUrl: String,
     httpClientEngine: HttpClientEngine?
 ) {
+    fun saveToken(token: String?) {
+
+        keyValueStorage.token = "${token}"
+//        settings.putString("pref_token" , )
+
+    }
+
+    companion object{
+        var factory : SharedFactory? = null
+    }
+
+    init {
+        factory = this
+    }
+
+
     // special for iOS call side we not use argument with default value
     constructor(
         settings: Settings,
@@ -55,7 +71,7 @@ class SharedFactory(
         httpClientEngine = null
     )
 
-    private val keyValueStorage: KeyValueStorage by lazy { KeyValueStorage(settings) }
+    val keyValueStorage: KeyValueStorage by lazy { KeyValueStorage(settings) }
 
     private val json: Json by lazy {
         Json {
@@ -111,6 +127,7 @@ class SharedFactory(
     init {
         ServiceLocatorInstance.register(Json::class, json)
         ServiceLocatorInstance.register(HttpClient::class, httpClient)
+        ServiceLocatorInstance.runner()
 
         Napier.base(antilog)
 //        Napier.base(CrashReportingAntilog(CrashlyticsLogger()))
@@ -125,4 +142,5 @@ class SharedFactory(
                     ?: MR.strings.unknown_error.desc()
             }
     }
+
 }
