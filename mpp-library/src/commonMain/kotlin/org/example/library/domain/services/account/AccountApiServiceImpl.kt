@@ -15,13 +15,13 @@ import org.example.library.data.model.account.changePassword.ChangePasswordReque
         
 class AccountApiServiceImpl :  AccountApiService {
 
-    private val BASE_URL = "http://flythru.phpmawaqaa.com/api"
+    private val BASE_URL = "http://l7m.mawaqaademos.com/api"
 
     fun client() = ServiceLocatorInstance.provide(HttpClient::class)
     
         
     override suspend fun login(request: LoginRequest): LoginResponse  {
-         return client().post("$BASE_URL/driver/auth/login") {
+         return client().post("$BASE_URL/porter/auth/login") {
                 contentType(ContentType.Application.Json)
                 body = request
                 
@@ -31,7 +31,7 @@ class AccountApiServiceImpl :  AccountApiService {
 	
         
     override suspend fun sendPasswordCode(request: SendPasswordCodeRequest): SendPasswordCodeResponse  {
-         return client().post("$BASE_URL/driver/auth/send_password_code") {
+         return client().post("$BASE_URL/porter/auth/send_password_code") {
                 contentType(ContentType.Application.Json)
                 body = request
                 
@@ -41,7 +41,7 @@ class AccountApiServiceImpl :  AccountApiService {
 	
         
     override suspend fun verifyPasswordCode(request: VerifyPasswordCodeRequest): VerifyPasswordCodeResponse  {
-         return client().post("$BASE_URL/driver/auth/verify_password_code") {
+         return client().post("$BASE_URL/porter/auth/verify_password_code") {
                 contentType(ContentType.Application.Json)
                 body = request
                 
@@ -51,7 +51,7 @@ class AccountApiServiceImpl :  AccountApiService {
 	
         
     override suspend fun changePassword(request: ChangePasswordRequest): ChangePasswordResponse  {
-         return client().post("$BASE_URL/driver/auth/changepassword") {
+         return client().post("$BASE_URL/porter/auth/changepassword") {
                 contentType(ContentType.Application.Json)
                 body = request
                 

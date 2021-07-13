@@ -15,10 +15,16 @@
 		45F47921219463C7003D25FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F4791A219463C7003D25FA /* Assets.xcassets */; };
 		45F47922219463C7003D25FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4791B219463C7003D25FA /* AppDelegate.swift */; };
 		49BB9C65267B6A650078D6A9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB9C64267B6A650078D6A9 /* UIView+Extensions.swift */; };
-		8B35A01D2691A4D800D25EA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B35A01B2691A4D800D25EA6 /* LoginViewController.swift */; };
-		8B35A01E2691A4D800D25EA6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B35A01C2691A4D800D25EA6 /* LoginViewController.xib */; };
-		8B35A0222691A5BB00D25EA6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B35A0202691A5BB00D25EA6 /* HomeVC.swift */; };
-		8B35A0232691A5BB00D25EA6 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B35A0212691A5BB00D25EA6 /* HomeVC.xib */; };
+		8B9CC844269DA4080097818B /* SubmitedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CC833269DA4080097818B /* SubmitedViewController.swift */; };
+		8B9CC845269DA4080097818B /* SubmitedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B9CC834269DA4080097818B /* SubmitedViewController.xib */; };
+		8B9CC846269DA4080097818B /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B9CC837269DA4080097818B /* MainTabBarController.xib */; };
+		8B9CC847269DA4080097818B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CC838269DA4080097818B /* MainTabBarController.swift */; };
+		8B9CC848269DA4080097818B /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B9CC83A269DA4080097818B /* OrdersViewController.xib */; };
+		8B9CC849269DA4080097818B /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CC83B269DA4080097818B /* OrdersViewController.swift */; };
+		8B9CC84A269DA4080097818B /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B9CC83D269DA4080097818B /* NotificationsViewController.xib */; };
+		8B9CC84B269DA4080097818B /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CC83E269DA4080097818B /* NotificationsViewController.swift */; };
+		8B9CC84C269DA4080097818B /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B9CC842269DA4080097818B /* LoginViewController.xib */; };
+		8B9CC84D269DA4080097818B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CC843269DA4080097818B /* LoginViewController.swift */; };
 		BDCC368E263E8CE10097A176 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC368A263E8CE10097A176 /* CoordinatorProtocol.swift */; };
 		BDCC368F263E8CE10097A176 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC368B263E8CE10097A176 /* BaseCoordinator.swift */; };
 		BDCC3690263E8CE10097A176 /* MVVMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC368C263E8CE10097A176 /* MVVMController.swift */; };
@@ -41,10 +47,16 @@
 		45F4791C219463C7003D25FA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49BB9C64267B6A650078D6A9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		62AD21CBE99F192264A8B2DB /* Pods-ios-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-app/Pods-ios-app.debug.xcconfig"; sourceTree = "<group>"; };
-		8B35A01B2691A4D800D25EA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		8B35A01C2691A4D800D25EA6 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		8B35A0202691A5BB00D25EA6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		8B35A0212691A5BB00D25EA6 /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		8B9CC833269DA4080097818B /* SubmitedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitedViewController.swift; sourceTree = "<group>"; };
+		8B9CC834269DA4080097818B /* SubmitedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmitedViewController.xib; sourceTree = "<group>"; };
+		8B9CC837269DA4080097818B /* MainTabBarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
+		8B9CC838269DA4080097818B /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		8B9CC83A269DA4080097818B /* OrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
+		8B9CC83B269DA4080097818B /* OrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		8B9CC83D269DA4080097818B /* NotificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsViewController.xib; sourceTree = "<group>"; };
+		8B9CC83E269DA4080097818B /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		8B9CC842269DA4080097818B /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8B9CC843269DA4080097818B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A644D2F1C5377C40A53FCD6A /* Pods-TestProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProj.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestProj/Pods-TestProj.release.xcconfig"; sourceTree = "<group>"; };
 		BDCC368A263E8CE10097A176 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		BDCC368B263E8CE10097A176 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -113,7 +125,7 @@
 		45F47910219463C7003D25FA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				8B35A0182691A4BB00D25EA6 /* View */,
+				8B9CC830269DA4080097818B /* Presentation */,
 				0E5748052660B2E800C9BCDB /* Firebase */,
 				BDCC3692263E90A20097A176 /* Extensions */,
 				BDCC3688263E8CE10097A176 /* Common */,
@@ -136,39 +148,93 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8B35A0182691A4BB00D25EA6 /* View */ = {
+		8B9CC830269DA4080097818B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				8B35A0192691A4C100D25EA6 /* Account */,
+				8B9CC831269DA4080097818B /* Home */,
+				8B9CC83F269DA4080097818B /* Account */,
 			);
-			path = View;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		8B35A0192691A4C100D25EA6 /* Account */ = {
+		8B9CC831269DA4080097818B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8B35A01F2691A5A400D25EA6 /* HomeVC */,
-				8B35A01A2691A4C600D25EA6 /* Login */,
+				8B9CC832269DA4080097818B /* Submited */,
+				8B9CC835269DA4080097818B /* OrderDetails */,
+				8B9CC836269DA4080097818B /* MainVC */,
+				8B9CC839269DA4080097818B /* Orders */,
+				8B9CC83C269DA4080097818B /* Notifications */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B9CC832269DA4080097818B /* Submited */ = {
+			isa = PBXGroup;
+			children = (
+				8B9CC833269DA4080097818B /* SubmitedViewController.swift */,
+				8B9CC834269DA4080097818B /* SubmitedViewController.xib */,
+			);
+			path = Submited;
+			sourceTree = "<group>";
+		};
+		8B9CC835269DA4080097818B /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OrderDetails;
+			sourceTree = "<group>";
+		};
+		8B9CC836269DA4080097818B /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				8B9CC837269DA4080097818B /* MainTabBarController.xib */,
+				8B9CC838269DA4080097818B /* MainTabBarController.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		8B9CC839269DA4080097818B /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				8B9CC83A269DA4080097818B /* OrdersViewController.xib */,
+				8B9CC83B269DA4080097818B /* OrdersViewController.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		8B9CC83C269DA4080097818B /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				8B9CC83D269DA4080097818B /* NotificationsViewController.xib */,
+				8B9CC83E269DA4080097818B /* NotificationsViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		8B9CC83F269DA4080097818B /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8B9CC840269DA4080097818B /* ForgetPassword */,
+				8B9CC841269DA4080097818B /* Login */,
 			);
 			path = Account;
 			sourceTree = "<group>";
 		};
-		8B35A01A2691A4C600D25EA6 /* Login */ = {
+		8B9CC840269DA4080097818B /* ForgetPassword */ = {
 			isa = PBXGroup;
 			children = (
-				8B35A01B2691A4D800D25EA6 /* LoginViewController.swift */,
-				8B35A01C2691A4D800D25EA6 /* LoginViewController.xib */,
 			);
-			path = Login;
+			path = ForgetPassword;
 			sourceTree = "<group>";
 		};
-		8B35A01F2691A5A400D25EA6 /* HomeVC */ = {
+		8B9CC841269DA4080097818B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				8B35A0202691A5BB00D25EA6 /* HomeVC.swift */,
-				8B35A0212691A5BB00D25EA6 /* HomeVC.xib */,
+				8B9CC842269DA4080097818B /* LoginViewController.xib */,
+				8B9CC843269DA4080097818B /* LoginViewController.swift */,
 			);
-			path = HomeVC;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		BDCC3688263E8CE10097A176 /* Common */ = {
@@ -271,11 +337,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B35A01E2691A4D800D25EA6 /* LoginViewController.xib in Resources */,
-				8B35A0232691A5BB00D25EA6 /* HomeVC.xib in Resources */,
+				8B9CC84A269DA4080097818B /* NotificationsViewController.xib in Resources */,
+				8B9CC84C269DA4080097818B /* LoginViewController.xib in Resources */,
+				8B9CC848269DA4080097818B /* OrdersViewController.xib in Resources */,
 				0E5748072660B30E00C9BCDB /* GoogleService-Info-org.example.app.plist in Resources */,
+				8B9CC845269DA4080097818B /* SubmitedViewController.xib in Resources */,
 				45F4791E219463C7003D25FA /* Main.storyboard in Resources */,
 				45F4791D219463C7003D25FA /* LaunchScreen.storyboard in Resources */,
+				8B9CC846269DA4080097818B /* MainTabBarController.xib in Resources */,
 				45F47921219463C7003D25FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,14 +436,17 @@
 				BDCC3691263E8CE10097A176 /* BaseViewController.swift in Sources */,
 				BDCC3690263E8CE10097A176 /* MVVMController.swift in Sources */,
 				BDCC3698263E914B0097A176 /* UIViewController+Extensions.swift in Sources */,
+				8B9CC844269DA4080097818B /* SubmitedViewController.swift in Sources */,
 				451D7B1A235845B100095112 /* AppComponent.swift in Sources */,
 				BDCC368E263E8CE10097A176 /* CoordinatorProtocol.swift in Sources */,
 				BDCC369C263E98AA0097A176 /* AppCoordinator.swift in Sources */,
 				BDCC368F263E8CE10097A176 /* BaseCoordinator.swift in Sources */,
 				BDCC369A263E91840097A176 /* BaseCoordinator+Extensions.swift in Sources */,
-				8B35A0222691A5BB00D25EA6 /* HomeVC.swift in Sources */,
+				8B9CC849269DA4080097818B /* OrdersViewController.swift in Sources */,
+				8B9CC847269DA4080097818B /* MainTabBarController.swift in Sources */,
+				8B9CC84D269DA4080097818B /* LoginViewController.swift in Sources */,
 				49BB9C65267B6A650078D6A9 /* UIView+Extensions.swift in Sources */,
-				8B35A01D2691A4D800D25EA6 /* LoginViewController.swift in Sources */,
+				8B9CC84B269DA4080097818B /* NotificationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

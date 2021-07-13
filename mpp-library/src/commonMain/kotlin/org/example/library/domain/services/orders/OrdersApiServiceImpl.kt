@@ -4,30 +4,26 @@ import io.ktor.client.*
 import io.ktor.client.request.*
 import io.ktor.http.*
 import org.example.library.di.ServiceLocatorInstance
-import org.example.library.data.model.orders.getCancellationReasons.GetCancellationReasonsResponse
-import org.example.library.data.model.orders.inJourney.InJourneyResponse
-import org.example.library.data.model.orders.firstOrder.FirstOrderResponse
-import org.example.library.data.model.orders.addSignature.AddSignatureResponse
-import org.example.library.data.model.orders.cancelOrder.CancelOrderResponse
+import org.example.library.data.model.orders.assignedOrder.AssignedOrderResponse
+import org.example.library.data.model.orders.orderDetails.OrderDetailsResponse
+import org.example.library.data.model.orders.collectBags.CollectBagsResponse
 import org.example.library.data.model.orders.confirmOrder.ConfirmOrderResponse
-import org.example.library.data.model.orders.completedJourney.CompletedJourneyResponse         
+import org.example.library.data.model.orders.collectedOrder.CollectedOrderResponse         
 
 
-
-import org.example.library.data.model.orders.addSignature.AddSignatureRequest
-import org.example.library.data.model.orders.cancelOrder.CancelOrderRequest
-
+import org.example.library.data.model.orders.collectBags.CollectBagsRequest
+import org.example.library.data.model.orders.confirmOrder.ConfirmOrderRequest
 
         
 class OrdersApiServiceImpl :  OrdersApiService {
 
-    private val BASE_URL = "http://flythru.phpmawaqaa.com/api"
+    private val BASE_URL = "http://l7m.mawaqaademos.com/api"
 
     fun client() = ServiceLocatorInstance.provide(HttpClient::class)
     
         
-    override suspend fun getCancellationReasons(): GetCancellationReasonsResponse  {
-         return client().get("$BASE_URL/driver/cancellation_reasons") {
+    override suspend fun assignedOrder(): AssignedOrderResponse  {
+         return client().get("$BASE_URL/porter/order/assigned") {
                 contentType(ContentType.Application.Json)
                 
                 
@@ -36,8 +32,8 @@ class OrdersApiServiceImpl :  OrdersApiService {
 
 	
         
-    override suspend fun inJourney(): InJourneyResponse  {
-         return client().get("$BASE_URL/driver/journey") {
+    override suspend fun orderDetails(): OrderDetailsResponse  {
+         return client().get("$BASE_URL/porter/order/show/41") {
                 contentType(ContentType.Application.Json)
                 
                 
@@ -46,20 +42,8 @@ class OrdersApiServiceImpl :  OrdersApiService {
 
 	
         
-    override suspend fun firstOrder(map: HashMap<String,String>): FirstOrderResponse  {
-         return client().get("$BASE_URL/driver/first_order") {
-                contentType(ContentType.Application.Json)
-                
-                map.forEach{
-					 parameter(it.key , it.value) 
-			}
-         }
-    }
-
-	
-        
-    override suspend fun addSignature(request: AddSignatureRequest): AddSignatureResponse  {
-         return client().post("$BASE_URL/driver/add_signature") {
+    override suspend fun collectBags(request: CollectBagsRequest): CollectBagsResponse  {
+         return client().post("$BASE_URL/porter/order/collect_bag") {
                 contentType(ContentType.Application.Json)
                 body = request
                 
@@ -68,8 +52,8 @@ class OrdersApiServiceImpl :  OrdersApiService {
 
 	
         
-    override suspend fun cancelOrder(request: CancelOrderRequest): CancelOrderResponse  {
-         return client().post("$BASE_URL/driver/cancel") {
+    override suspend fun confirmOrder(request: ConfirmOrderRequest): ConfirmOrderResponse  {
+         return client().post("$BASE_URL/porter/order/confirm_order") {
                 contentType(ContentType.Application.Json)
                 body = request
                 
@@ -78,18 +62,8 @@ class OrdersApiServiceImpl :  OrdersApiService {
 
 	
         
-    override suspend fun confirmOrder(): ConfirmOrderResponse  {
-         return client().get("$BASE_URL/driver/confirm/49") {
-                contentType(ContentType.Application.Json)
-                
-                
-         }
-    }
-
-	
-        
-    override suspend fun completedJourney(): CompletedJourneyResponse  {
-         return client().get("$BASE_URL/driver/completed_journey") {
+    override suspend fun collectedOrder(): CollectedOrderResponse  {
+         return client().get("$BASE_URL/porter/order/collected") {
                 contentType(ContentType.Application.Json)
                 
                 

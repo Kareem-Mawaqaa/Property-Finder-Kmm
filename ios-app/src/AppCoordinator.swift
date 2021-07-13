@@ -12,7 +12,6 @@ class AppCoordinator: BaseCoordinator {
     
     override func start() {
         let vc = LoginViewController()
-        vc.view.backgroundColor = .green
         self.window.rootViewController = vc
     }
     

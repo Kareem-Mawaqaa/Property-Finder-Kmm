@@ -3,18 +3,18 @@ package org.example.library.domain.usecases.orders
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-                      
+import org.example.library.data.model.orders.confirmOrder.ConfirmOrderRequest                      
 import org.example.library.data.model.orders.confirmOrder.ConfirmOrderResponse
 import org.example.library.domain.data.DataState
 import org.example.library.domain.services.orders.OrdersApiService
 
 class ConfirmOrderUseCase(val service: OrdersApiService) {
 
-    fun execute(): Flow<DataState<ConfirmOrderResponse>> = flow {
+    fun execute(request: ConfirmOrderRequest): Flow<DataState<ConfirmOrderResponse>> = flow {
         try {
             emit(DataState.loading<ConfirmOrderResponse>())
 
-            val result = service.confirmOrder( )
+            val result = service.confirmOrder( request)
 
             emit(DataState.success(result))
 

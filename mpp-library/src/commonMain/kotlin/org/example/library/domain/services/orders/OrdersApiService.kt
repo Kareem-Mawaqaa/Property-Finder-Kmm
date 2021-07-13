@@ -1,29 +1,23 @@
 package org.example.library.domain.services.orders
 
-import org.example.library.data.model.orders.getCancellationReasons.GetCancellationReasonsResponse
-import org.example.library.data.model.orders.inJourney.InJourneyResponse
-import org.example.library.data.model.orders.firstOrder.FirstOrderResponse
-import org.example.library.data.model.orders.addSignature.AddSignatureResponse
-import org.example.library.data.model.orders.cancelOrder.CancelOrderResponse
+import org.example.library.data.model.orders.assignedOrder.AssignedOrderResponse
+import org.example.library.data.model.orders.orderDetails.OrderDetailsResponse
+import org.example.library.data.model.orders.collectBags.CollectBagsResponse
 import org.example.library.data.model.orders.confirmOrder.ConfirmOrderResponse
-import org.example.library.data.model.orders.completedJourney.CompletedJourneyResponse         
+import org.example.library.data.model.orders.collectedOrder.CollectedOrderResponse         
 
 
-
-import org.example.library.data.model.orders.addSignature.AddSignatureRequest
-import org.example.library.data.model.orders.cancelOrder.CancelOrderRequest
-
+import org.example.library.data.model.orders.collectBags.CollectBagsRequest
+import org.example.library.data.model.orders.confirmOrder.ConfirmOrderRequest
 
         
 interface OrdersApiService {
 
-    suspend fun getCancellationReasons(): GetCancellationReasonsResponse
-	suspend fun inJourney(): InJourneyResponse
-	suspend fun firstOrder(map: HashMap<String,String>): FirstOrderResponse
-	suspend fun addSignature(request: AddSignatureRequest): AddSignatureResponse
-	suspend fun cancelOrder(request: CancelOrderRequest): CancelOrderResponse
-	suspend fun confirmOrder(): ConfirmOrderResponse
-	suspend fun completedJourney(): CompletedJourneyResponse
+    suspend fun assignedOrder(): AssignedOrderResponse
+	suspend fun orderDetails(): OrderDetailsResponse
+	suspend fun collectBags(request: CollectBagsRequest): CollectBagsResponse
+	suspend fun confirmOrder(request: ConfirmOrderRequest): ConfirmOrderResponse
+	suspend fun collectedOrder(): CollectedOrderResponse
    
 }
             

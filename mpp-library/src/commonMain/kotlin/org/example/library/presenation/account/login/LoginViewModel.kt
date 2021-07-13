@@ -1,71 +1,42 @@
 package org.example.library.presenation.account.login
 
 import dev.icerock.moko.mvvm.livedata.MutableLiveData
+import dev.icerock.moko.mvvm.viewmodel.ViewModel
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import org.example.library.SharedFactory
 import org.example.library.data.model.account.login.LoginRequest
+import org.example.library.data.model.account.login.LoginResponse
 import org.example.library.di.Instance
 import org.example.library.domain.usecases.account.LoginUseCase
-import org.example.library.presenation.BaseError
-import org.example.library.presenation.BaseViewModel
-import org.example.library.presenation.ErrorType
+import org.example.library.presenation.BaseViewModel2
+import org.example.library.presenation.ErrorViewState
 
-class LoginViewModel() : BaseViewModel<LoginView>() {
-
-    private val muCurrentLogin = MutableLiveData(false)
+class LoginViewModel : ViewModel() {
 
 
-    private val loginUseCase = Instance<LoginUseCase>()
+    public val viewState = MutableLiveData<LoginViewState>(LoginViewState())
+    public val errorViewState = MutableLiveData<ErrorViewState>(ErrorViewState())
+
+    val loginUseCase = Instance<LoginUseCase>()
 
 
     fun login(request: LoginRequest) {
 
-        // TO Avoid Multiple Login when Deviec Rotate Screen
-        if (muCurrentLogin.value) {
-            view?.onLoading(true)
-            return
-        }
-
-        muCurrentLogin.postValue(true)
-        view?.onLoading(true)
-
         viewModelScope.launch {
-
-
-            muCurrentLogin.postValue(false)
             loginUseCase.execute(request).onEach { dataState ->
 
-
-
                 dataState.data?.let {
-
-                    SharedFactory.factory?.keyValueStorage?.token = "Bearer ${it.token}"
-                    view?.onLoading(false)
-                    view?.onLoginSuccess(it)
-                    view?.goToHomeScreen()
-
+                    viewState.postValue(LoginViewState(loginResponse = it))
                 }
 
                 dataState.error?.let {
-                    view?.onLoading(false)
-                    view?.onError(BaseError(it, ErrorType.DIALOG, false))
+                    errorViewState.postValue(ErrorViewState(it))
                 }
 
-
-            }.stateIn(this)
-
+            }.launchIn(this)
         }
-    }
 
-    override fun onAttachView() {
-        view?.onLoading(muCurrentLogin.value)
-    }
-
-    override fun onDeAttachView() {
-        // Clear
-//        onCleared()
     }
 
 
