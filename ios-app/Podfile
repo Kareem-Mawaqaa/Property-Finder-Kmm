@@ -19,6 +19,8 @@ target 'ios-app' do
   pod 'MCRCStaticReporter', 
     :git => 'https://github.com/icerockdev/moko-crash-reporting.git', :tag => 'release/0.1.2'
 
+
+  pod 'ProgressHUD'
   # pod 'Firebase', '~> 6.33.0'
   # pod 'R.swift', '~> 5.3.1'           # Code generation for resources  https://github.com/mac-cain13/R.swift
   # pod 'ProgressHUD', '~> 2.70'        # Loading animation https://github.com/relatedcode/ProgressHUD

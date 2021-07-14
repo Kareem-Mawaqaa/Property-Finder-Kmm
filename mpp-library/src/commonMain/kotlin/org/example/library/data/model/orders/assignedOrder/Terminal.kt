@@ -1,7 +1,9 @@
 package org.example.library.data.model.orders.assignedOrder
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Terminal(
 	@SerialName("airport_id")
 	var airport_id : Int? = null,
@@ -14,5 +16,5 @@ data class Terminal(
 	@SerialName("id")
 	var id : Int? = null,
 	@SerialName("deleted_at")
-	var deleted_at : Any? = null,
+	var deleted_at : String? = null,
 ) 

@@ -9,7 +9,7 @@ import org.example.library.data.model.search.search.SearchRequest
         
 class SearchApiServiceImpl :  SearchApiService {
 
-    private val BASE_URL = "http://l7m.mawaqaademos.com/api"
+    private val BASE_URL = "http://flythru.phpmawaqaa.com/api"
 
     fun client() = ServiceLocatorInstance.provide(HttpClient::class)
     

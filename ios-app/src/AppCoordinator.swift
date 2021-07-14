@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import MultiPlatformLibrary
 
 class AppCoordinator: BaseCoordinator {
     
     override func start() {
+        if (AppComponent.factory.keyValueStorage.token != nil && AppComponent.factory.keyValueStorage.token != ""){
+            
+            let vc = MainTabBarController()
+            self.window.rootViewController = vc
+            
+        }else {
+        
         let vc = LoginViewController()
         self.window.rootViewController = vc
+        }
     }
     
 }

@@ -17,7 +17,7 @@ import org.example.library.data.model.orders.confirmOrder.ConfirmOrderRequest
         
 class OrdersApiServiceImpl :  OrdersApiService {
 
-    private val BASE_URL = "http://l7m.mawaqaademos.com/api"
+    private val BASE_URL = "http://flythru.phpmawaqaa.com/api"
 
     fun client() = ServiceLocatorInstance.provide(HttpClient::class)
     

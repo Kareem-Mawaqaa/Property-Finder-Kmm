@@ -1,7 +1,9 @@
 package org.example.library.data.model.orders.assignedOrder
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Orders(
 	@SerialName("convert_bags_larg")
 	var convert_bags_larg : Int? = null,
@@ -12,7 +14,7 @@ data class Orders(
 	@SerialName("belt")
 	var belt : Belt? = null,
 	@SerialName("bags")
-	var bags : ArrayList<Bags>? = null,
+	var bags : ArrayList<WrapperBag>? = null,
 	@SerialName("created_at")
 	var created_at : String? = null,
 	@SerialName("addresse")
@@ -20,7 +22,7 @@ data class Orders(
 	@SerialName("terminal")
 	var terminal : Terminal? = null,
 	@SerialName("refend")
-	var refend : Any? = null,
+	var refend : Double? = null,
 	@SerialName("airport")
 	var airport : Airport? = null,
 	@SerialName("vehicle")
@@ -28,7 +30,7 @@ data class Orders(
 	@SerialName("rate")
 	var rate : Int? = null,
 	@SerialName("subtotal")
-	var subtotal : Int? = null,
+	var subtotal : Double? = null,
 	@SerialName("number_of_bags")
 	var number_of_bags : Int? = null,
 	@SerialName("actual_bags")
@@ -40,7 +42,7 @@ data class Orders(
 	@SerialName("id")
 	var id : Int? = null,
 	@SerialName("grand_total")
-	var grand_total : Int? = null,
+	var grand_total : Double? = null,
 	@SerialName("payment_method")
 	var payment_method : String? = null,
 	@SerialName("porter")
@@ -50,3 +52,9 @@ data class Orders(
 	@SerialName("customer")
 	var customer : Customer? = null,
 ) 
+
+
+@Serializable
+class KAny()  {
+
+}

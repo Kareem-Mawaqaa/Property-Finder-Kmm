@@ -1,7 +1,9 @@
 package org.example.library.data.model.orders.assignedOrder
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Airport(
 	@SerialName("country")
 	var country : String? = null,

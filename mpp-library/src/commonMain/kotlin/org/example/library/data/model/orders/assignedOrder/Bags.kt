@@ -1,7 +1,9 @@
 package org.example.library.data.model.orders.assignedOrder
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Bags(
 	@SerialName("image")
 	var image : String? = null,
@@ -12,9 +14,9 @@ data class Bags(
 	@SerialName("ft_tag")
 	var ft_tag : String? = null,
 	@SerialName("price")
-	var price : Int? = null,
+	var price : Double? = null,
 	@SerialName("image_damaged")
-	var image_damaged : Any? = null,
+	var image_damaged : String? = null,
 	@SerialName("tag_number")
 	var tag_number : String? = null,
 	@SerialName("booking_reference")

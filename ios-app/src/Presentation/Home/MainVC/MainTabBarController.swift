@@ -14,12 +14,15 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UITabBar.appearance().tintColor = UIColor(named: "second_color")
+        
         let ordersItem = UITabBarItem()
         ordersItem.title = "ORDERS"
         ordersItem.image = UIImage(named: "img_orders")
 
         let ordersVC =  OrdersViewController()
         ordersVC.tabBarItem = ordersItem
+  
         
         let submitedItem = UITabBarItem()
         submitedItem.title  = "SUBMITED"
@@ -34,6 +37,7 @@ class MainTabBarController: UITabBarController {
         
         let notificationsVC = NotificationsViewController()
         notificationsVC.tabBarItem = notificationsItem
+        
         
         
         

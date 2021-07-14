@@ -1,7 +1,10 @@
 package org.example.library.data.model.orders.assignedOrder
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+
+@Serializable
 data class Driver(
 	@SerialName("nationality")
 	var nationality : String? = null,

@@ -15,7 +15,7 @@ import org.example.library.data.model.account.changePassword.ChangePasswordReque
         
 class AccountApiServiceImpl :  AccountApiService {
 
-    private val BASE_URL = "http://l7m.mawaqaademos.com/api"
+    private val BASE_URL = "http://flythru.phpmawaqaa.com/api"
 
     fun client() = ServiceLocatorInstance.provide(HttpClient::class)
     

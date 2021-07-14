@@ -51,11 +51,11 @@ class SharedFactory(
     }
 
     companion object{
-        var factory : SharedFactory? = null
+//        var factory : SharedFactory? = null
     }
 
     init {
-        factory = this
+//        factory = this
     }
 
 
@@ -111,7 +111,7 @@ class SharedFactory(
             install(TokenFeature) {
                 tokenHeaderName = "Authorization"
                 tokenProvider = object : TokenFeature.TokenProvider {
-                    override fun getToken(): String? = keyValueStorage.token
+                    override fun getToken(): String? = "Bearer ${keyValueStorage.token}"
                 }
             }
 
@@ -127,7 +127,10 @@ class SharedFactory(
     init {
         ServiceLocatorInstance.register(Json::class, json)
         ServiceLocatorInstance.register(HttpClient::class, httpClient)
+        ServiceLocatorInstance.register(KeyValueStorage::class , keyValueStorage)
+
         ServiceLocatorInstance.runner()
+
 
         Napier.base(antilog)
 //        Napier.base(CrashReportingAntilog(CrashlyticsLogger()))

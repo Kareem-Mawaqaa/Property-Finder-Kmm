@@ -13,7 +13,7 @@ import org.example.app.R
 import org.example.library.presenation.account.login.LoginViewModel
 
 
-class LoginActivity : AppCompatActivity()  {
+class LoginActivity : AppCompatActivity() {
 
     val loginViewModel: LoginViewModel by viewModels()
 
@@ -21,7 +21,6 @@ class LoginActivity : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
 
 
 //        loginViewModel.attachView(this)
@@ -35,7 +34,17 @@ class LoginActivity : AppCompatActivity()  {
         }
 
 
-        loginViewModel.viewState.addObserver {  loginViewState ->
+        loginViewModel.viewState2.addObserver { dataState ->
+            dataState.data?.let {
+
+            }
+
+            dataState.error?.let {
+
+            }
+        }
+
+        loginViewModel.viewState.addObserver { loginViewState ->
 
             loginViewState.loginResponse?.let {
 
@@ -43,8 +52,6 @@ class LoginActivity : AppCompatActivity()  {
 
         }
     }
-
-
 
 
     override fun onPause() {

@@ -2,14 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersViewController" customModule="flythru_porter" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersViewController" customModule="mokoApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="qz3-Vj-lUT" id="8bi-BE-Hp1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +34,10 @@
                         <constraint firstAttribute="height" constant="1" id="Puo-Fk-8ml"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qz3-Vj-lUT">
+                    <rect key="frame" x="20" y="158" width="374" height="686"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All orders will be updated in this page " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXk-Xu-Rr2">
                     <rect key="frame" x="62.5" y="115" width="289" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -44,10 +50,14 @@
             <constraints>
                 <constraint firstItem="ZXk-Xu-Rr2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0fA-Tc-icN"/>
                 <constraint firstItem="Tmz-3G-zpn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="12Y-qj-RmH"/>
+                <constraint firstItem="qz3-Vj-lUT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1HR-qm-Sv4"/>
                 <constraint firstItem="Uqp-xk-dpn" firstAttribute="top" secondItem="Tmz-3G-zpn" secondAttribute="bottom" constant="10" id="8eV-xf-dzP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qz3-Vj-lUT" secondAttribute="trailing" constant="20" id="AHc-o5-vgk"/>
                 <constraint firstItem="ZXk-Xu-Rr2" firstAttribute="top" secondItem="Uqp-xk-dpn" secondAttribute="bottom" constant="20" id="DJm-O8-9QM"/>
+                <constraint firstItem="qz3-Vj-lUT" firstAttribute="top" secondItem="ZXk-Xu-Rr2" secondAttribute="bottom" constant="20" id="QGo-sj-A3R"/>
                 <constraint firstItem="Tmz-3G-zpn" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="WXP-TS-JiC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Uqp-xk-dpn" secondAttribute="trailing" constant="20" id="XMY-ci-8du"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qz3-Vj-lUT" secondAttribute="bottom" constant="20" id="p6k-Al-FSq"/>
                 <constraint firstItem="Uqp-xk-dpn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="wcO-5w-xJZ"/>
             </constraints>
             <point key="canvasLocation" x="139" y="126"/>

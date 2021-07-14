@@ -1,16 +1,18 @@
 package org.example.library.data.model.orders.assignedOrder
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Addresse(
 	@SerialName("area")
 	var area : String? = null,
 	@SerialName("office_number")
-	var office_number : Any? = null,
+	var office_number : String? = null,
 	@SerialName("apartment_number")
 	var apartment_number : String? = null,
 	@SerialName("instructions")
-	var instructions : Any? = null,
+	var instructions : String? = null,
 	@SerialName("address_type")
 	var address_type : Int? = null,
 	@SerialName("lat_long")
@@ -18,11 +20,11 @@ data class Addresse(
 	@SerialName("block_number")
 	var block_number : String? = null,
 	@SerialName("room_number")
-	var room_number : Any? = null,
+	var room_number : String? = null,
 	@SerialName("floor_number")
 	var floor_number : String? = null,
 	@SerialName("house_number")
-	var house_number : Any? = null,
+	var house_number : String? = null,
 	@SerialName("address_name")
 	var address_name : String? = null,
 	@SerialName("area_id")
@@ -32,11 +34,11 @@ data class Addresse(
 	@SerialName("avenue_number")
 	var avenue_number : String? = null,
 	@SerialName("hotel_name")
-	var hotel_name : Any? = null,
+	var hotel_name : String? = null,
 	@SerialName("extra_info")
-	var extra_info : Any? = null,
+	var extra_info : String? = null,
 	@SerialName("additional_info")
-	var additional_info : Any? = null,
+	var additional_info : String? = null,
 	@SerialName("street")
 	var street : String? = null,
 	@SerialName("id")
