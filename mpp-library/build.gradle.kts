@@ -23,9 +23,9 @@ val mppLibs = listOf(
     Deps.Libs.MultiPlatform.mokoMvvmState,
     Deps.Libs.MultiPlatform.mokoUnits,
     Deps.Libs.MultiPlatform.mokoFields,
-    Deps.Libs.MultiPlatform.mokoNetwork,
+//    Deps.Libs.MultiPlatform.mokoNetwork,
     Deps.Libs.MultiPlatform.mokoErrors,
-    Deps.Libs.MultiPlatform.mokoNetworkErrors,
+//    Deps.Libs.MultiPlatform.mokoNetworkErrors,
     Deps.Libs.MultiPlatform.mokoCrashReportingCore,
     Deps.Libs.MultiPlatform.mokoCrashReportingCrashlytics,
     Deps.Libs.MultiPlatform.mokoCrashReportingNapier
@@ -56,9 +56,9 @@ dependencies {
     commonTestImplementation(Deps.Libs.MultiPlatform.Tests.ktorClientMock)
 }
 
-multiplatformResources {
-    multiplatformResourcesPackage = "org.example.library"
-}
+//multiplatformResources {
+//    multiplatformResourcesPackage = "org.example.library"
+//}
 
 framework {
     mppModules.forEach { export(it) }
