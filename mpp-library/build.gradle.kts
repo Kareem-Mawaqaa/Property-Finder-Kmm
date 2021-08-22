@@ -6,7 +6,7 @@ plugins {
     plugin(Deps.Plugins.androidLibrary)
     plugin(Deps.Plugins.kotlinMultiplatform)
     plugin(Deps.Plugins.mobileMultiplatform)
-    plugin(Deps.Plugins.mokoResources)
+//    plugin(Deps.Plugins.mokoResources)
     plugin(Deps.Plugins.iosFramework)
     plugin(Deps.Plugins.mokoNetwork)
     plugin(Deps.Plugins.kotlinSerialization)
@@ -17,7 +17,7 @@ val mppLibs = listOf(
     Deps.Libs.MultiPlatform.multiplatformSettings,
     Deps.Libs.MultiPlatform.napier,
     Deps.Libs.MultiPlatform.mokoParcelize,
-    Deps.Libs.MultiPlatform.mokoResources,
+//    Deps.Libs.MultiPlatform.mokoResources,
     Deps.Libs.MultiPlatform.mokoMvvmCore,
     Deps.Libs.MultiPlatform.mokoMvvmLiveData,
     Deps.Libs.MultiPlatform.mokoMvvmState,
