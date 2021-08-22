@@ -8,7 +8,7 @@ plugins {
     plugin(Deps.Plugins.mobileMultiplatform)
 //    plugin(Deps.Plugins.mokoResources)
     plugin(Deps.Plugins.iosFramework)
-    plugin(Deps.Plugins.mokoNetwork)
+//    plugin(Deps.Plugins.mokoNetwork)
     plugin(Deps.Plugins.kotlinSerialization)
     plugin(Deps.Plugins.kotlinParcelize)
 }
