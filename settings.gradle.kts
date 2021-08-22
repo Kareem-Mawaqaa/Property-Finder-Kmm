@@ -14,6 +14,6 @@ plugins {
     id("dev.icerock.gradle.talaiot") version("3.+")
 }
 
-include(":android-app")
+//include(":android-app")
 include(":mpp-library")
 //include(":mpp-library:feature:auth")
